@@ -35,3 +35,42 @@
 
 4. Now write the component itself.
 
+
+Address.js
+import React from 'react';
+
+const Address = props => (
+	<p>{props.address.line1}<br/>
+		{props.address.town}<br/>
+		{props.address.county}<br/>
+		{props.address.country}
+	</p>
+)
+
+export default Address;
+
+App.js
+import React, { Component } from 'react';
+import './App.css';
+import Address from './Address';
+
+const mockAddress = {
+	line1: '16 The Harbor',
+   	town: 'Newport',
+   	county: 'Gwent',
+    	country: 'Wales'
+};
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      	<Address address={mockAddress}></Address>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
