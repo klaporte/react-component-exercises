@@ -35,6 +35,13 @@ React.createElement(
   React.createElement(SpecialComponent, { foo: "abc" })
 );
 ```
-
+```
+<div>
+  <SpecialComponent>
+    <p>hello</p>
+  </SpecialComponent>    
+  <SpecialComponent foo="abc"/>
+</div>
+```
 
 
